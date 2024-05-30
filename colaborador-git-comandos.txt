@@ -1,0 +1,41 @@
+hola  buenas aqui les dejo los comandos para realizar cambios siendo un colaborador del proyecto
+
+1. clonar el repositorio para tenerlo localmente
+git clone https://github.com/usuario/proyecto.git
+(se remplaza el link con el del proyecto)
+
+2. en la terminal se va al la carpeta creada con:
+cd proyecto
+(en proyecto es la carpeta clonada)
+
+3. Se recomiendo crear una Rama (branch), de este modo puedes tener tu propio lugar donde realizar cambios para luego mandarlos al proyecto principal, por decirlo asi es tu borrador personal. No es necesario pero sirve para no estar escribiendo directamente sobre el proyecto principal.
+
+crear rama: 
+git checkout -b (nombre de la rama)
+
+luego para ir a la rama: 
+git checkout (nombre de la rama)
+
+4. con esto hecho puedes realizar los cambios en los archivos o añadir nuevos al proyecto
+
+git add (archivo_modificado.py)
+git commit -m "entre estos parentesis va un comentario"
+
+tambien puede revertir con: 
+git restore (nombre-del-archivo)
+
+5. sincroniza con el archivo principal del proyecto:
+git checkout (direccion-del-proyecto: main o master)
+git checkout master
+
+para ver los cambios que se han realizado en el proyecto principal: 
+git pull origin master
+
+6. dirigete a tu rama para mandar los cambios:
+git checkout (mi-branch)
+
+ahora para juntar los cambios hechos es:
+git merge master
+
+7. para subir los cambios a tu branch/rama: 
+git push origin mi-rama
