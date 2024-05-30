@@ -1,0 +1,26 @@
+# comandos importantes
+
+1.- git init (inicia el terminal)
+2.- git status (ve el estado de los archivos)
+3.- git add (EJ: git add archivo.)
+4.- git commit 
+5.- git push
+6.- git remote add (EJ: git remote add https://github.com/codenachoa/Hogar_De_Menores)
+
+EL ORDEN SERIA ASI
+
+################
+
+1.- git init
+2.- git remote add https://github.com/codenachoa/Hogar_De_Menores
+
+################
+
+para cargar los archivos:
+
+1.- creas el archivo
+2.- git add "nombre del archivo".py o .txt o .LoQueSea
+3.- git commit -m "mensaje de commit" (EJ cargado por Ignacio Ochoa)
+4.- git push
+
+################
