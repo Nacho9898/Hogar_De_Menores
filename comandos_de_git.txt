@@ -1,3 +1,8 @@
+
+
+
+##########################################################################################
+
 # comandos importantes
 
 1.- git init (inicia el terminal)
@@ -9,12 +14,12 @@
 
 EL ORDEN SERIA ASI
 
-################
+###########################################################################################
 
 1.- git init
 2.- git remote add https://github.com/codenachoa/Hogar_De_Menores
 
-################
+##########################################################################
 
 para cargar los archivos:
 
@@ -23,7 +28,4 @@ para cargar los archivos:
 3.- git commit -m "mensaje de commit" (EJ cargado por Ignacio Ochoa)
 4.- git push
 
-################
-################
-
-prueba
+###########################################################################
