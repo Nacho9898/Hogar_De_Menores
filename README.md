@@ -8,4 +8,3 @@ Labores
 
 3.- Labores diarias
 
-![alt text](image.png)
