@@ -1,0 +1,70 @@
+
+=============================================================================
+
+Comandos basicos de la terminal
+
+ls          || (mostrar archivos y ficheros)
+cd          || (cambiar directorio)
+pwd         || (te dice donde te encuentras)
+mkdir       || (crear carpeta)
+rm          || (eliminar archivo)
+rm -r       || (eliminar carpeta y contenido)
+
+=============================================================================
+
+Configuracion inicial git
+
+git config --global (--global es para toda la maquina)
+    user.name "Tu nombre"
+    user.email "Tu correo electronico"
+
+=============================================================================
+
+Comandos git
+
+git init                                                || (inicia un control de versiones en la carpeta que nos encontramos)
+git branch -m "Nombre de la branch"                     || (crea una nueva branch y nos cambia a ella)
+git branch -d "Nombre de la branch"                     || (elimina la rama)
+git add                                                 || (agrega archivos de la carpeta al staging)
+git add . o --all                                       || (agrega todos los archivos de la carpeta)
+git commit -m "Mensaje de commit"                       || (crea un commit con los archivos del staging)
+git log                                                 || (muestra el historial de commits)
+git status                                              || (muestra el estado de la carpeta y los archivos)
+git checkout                                            || (cambiar de rama y mas cosas) RECOMENDADO USAR git switch
+git checkout -b "Nombre de la branch"                   || (crea una nueva branch y nos cambia)
+git reset                                               || (deshace el ultimo commit)
+git alias                                               || (crea un alias para un comando, por ejemplo: git config --global alias.st status)
+git remote add origin "Direccion del repositorio"       || (agrega un repositorio remoto)
+git push -u origin "Nombre de la branch"                || (sube los cambios a la rama)
+git reset --hard                                        || (Borra todo lo trabajado y vuelve a la version elegida)
+git reflog                                              || (te muestra todo los datos de la linea)
+git pull origin "Nombre de la branch"                   || (trae los cambios de la rama)
+git tag                                                 || (deja un tag en la branch)
+git switch                                              || (Cambia de rama a la elegida)
+git merge "Nombre de la rama"                           || (Aplica los cambio de la rama elegida a la actual)
+git stash o git stash list                              || (es un commit temporal local que no afecta a la rama)
+git diff                                                || (Verifica los diferentes origenes de los archivos)
+git fetch                                               || (Descarga el historial de cambios en el local pero sin descargar los cambios)
+git pull                                                || (Descarga el historial de cambios en el local y descarga los cambios)
+git clone + url                                         || (Clona el repositorio)
+
+
+=============================================================================
+
+Conflicto de merge
+git merge --abort || (cancela el merge)
+git merge --continue || (continua el merge)
+
+=============================================================================
+
+Fichero .gitignore
+El fichero .gitignore es un archivo de texto que se coloca en la raíz
+del proyecto y que indica a Git qué archivos o directorios
+ignorar en el seguimiento de versiones.
+
+Ejemplos de contenido del fichero .gitignore:
+
+*.txt
+*.pdf
+*.exe
+*.zip
