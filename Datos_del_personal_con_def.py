@@ -52,14 +52,19 @@ def lista_del_personal1():
                     print("No se puede dejar en blanco")
             
             while (True):
-                print("Ingrese el Rut")
-                rut=input()
-                if rut:
-                    listpersonal.append(rut)
+                def generar_rut_con_dv(rut_bas, dv):
+                    return f"{rut_bas}-{dv.upper()}"
+                print("Porfavor ingrese su rut sin digito de verificacion y sin puntos")
+                rut_bas=int(input())
+                print("Porfavor ingrese el codigo de verificaciòn")
+                dv=input()
+                rut_completo = generar_rut_con_dv(rut_bas, dv)
+                if rut_bas or dv or rut_completo:
+                    listpersonal.append(rut_completo)
                     break
                 else:
                     print("No se puede dejar en blanco")
-            
+                
             while (True):
                 print("Ingrese su Nacionalidad")
                 nac=input()
@@ -80,4 +85,3 @@ def lista_del_personal1():
         elif res==3:
             break
 
-3
