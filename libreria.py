@@ -1,91 +1,95 @@
 def lista_del_personal1():
-    listpersonal=[]
-    while (True):
+    personal = []  # Lista para almacenar datos del personal
+
+    while True:
         print("Ingrese si quiere ver o agregar los datos del personal")
         print("1) Ver datos del personal")
         print("2) Agregar datos")
         print("3) Volver")
-        res=int(input())
-        if res<1 or res>3:
-            print("Opciòn no valida")
-        elif res==1:
-            print(listpersonal)
-            print("Si desea volver precione cualquier tecla")
-            res2=input()
-        elif res==2:
+        res = int(input("Ingrese una opción: "))
 
-            while (True):
-                print("ingrese el primer nombre")
-                nom1=input()
+        if res == 1:
+            if not personal:
+                print("No hay datos del personal ingresados.")
+            else:
+                print("Datos del personal:")
+                for datos_persona in personal:
+                    print("Datos de la persona:")
+                    for key, value in datos_persona.items():
+                        print(f"{key}: {value}")
+                    print()  # Espacio entre datos de diferentes personas
+                input("Presione cualquier tecla para volver al menú principal.")
+        
+        elif res == 2:
+            datos_persona = {}  # Diccionario para almacenar los datos de una persona
+            
+            while True:
+                nom1 = input("Ingrese el primer nombre: ")
                 if nom1:
-                    listpersonal.append(nom1)
+                    datos_persona["Primer Nombre"] = nom1
                     break
                 else:
                     print("No se puede dejar en blanco")
-                    
-            while (True):
-                print("Ingrese el segundo nombre")
-                nom2=input()
+            
+            while True:
+                nom2 = input("Ingrese el segundo nombre: ")
                 if nom2:
-                    listpersonal.append(nom2)
+                    datos_persona["Segundo Nombre"] = nom2
                     break
                 else:
                     print("No se puede dejar en blanco")
             
-            while (True):
-                print("Ingrese el primer apellido")
-                ape1=input()
+            while True:
+                ape1 = input("Ingrese el primer apellido: ")
                 if ape1:
-                    listpersonal.append(ape1)
+                    datos_persona["Primer Apellido"] = ape1
                     break
                 else:
                     print("No se puede dejar en blanco")
             
-            while (True):
-                print("Ingrese el segundo apellido")
-                ape2=input()
+            while True:
+                ape2 = input("Ingrese el segundo apellido: ")
                 if ape2:
-                    listpersonal.append(ape2)
+                    datos_persona["Segundo Apellido"] = ape2
                     break
                 else:
                     print("No se puede dejar en blanco")
-
+            
             def generar_rut_con_dv(rut_bas, dv):
                 return f"{rut_bas}-{dv.upper()}"
             
-            while (True):
-
-                print("Porfavor ingrese su rut sin digito de verificacion y sin puntos")
-                rut_bas=input()
-                print("Porfavor ingrese el codigo de verificaciòn")
-                dv=input()
+            while True:
+                rut_bas = input("Por favor ingrese su rut sin dígito de verificación y sin puntos: ")
+                dv = input("Por favor ingrese el código de verificación: ")
                 if rut_bas and dv:
                     rut_completo = generar_rut_con_dv(rut_bas, dv)
-                    listpersonal.append(rut_completo)
-                    break
-                else:
-                    print("No se puede dejar en blanco")
-
-            while (True):
-                print("Ingrese su Nacionalidad")
-                nac=input()
-                if nac:
-                    listpersonal.append(nac)
+                    datos_persona["RUT"] = rut_completo
                     break
                 else:
                     print("No se puede dejar en blanco")
             
-            while (True):
-                print("Ingrese si es voluntario o personal activo")
-                vol_o_act=input()
-                if vol_o_act:
-                    listpersonal.append(vol_o_act)
+            while True:
+                nac = input("Ingrese su Nacionalidad: ")
+                if nac:
+                    datos_persona["Nacionalidad"] = nac
                     break
                 else:
                     print("No se puede dejar en blanco")
-        elif res==3:
+            
+            while True:
+                vol_o_act = input("Ingrese si es voluntario o personal activo: ")
+                if vol_o_act:
+                    datos_persona["Tipo de Personal"] = vol_o_act
+                    break
+                else:
+                    print("No se puede dejar en blanco")
+            
+            # Agregar los datos de la persona a la lista personal
+            personal.append(datos_persona)
+            print("Datos del personal ingresados correctamente.")
+        
+        elif res == 3:
             break
-
 
 
 
