@@ -68,4 +68,4 @@ Ahora que opción desea:
             print("Gracias por usar el programa.")
             break
 else:
-    print("Acceso denegado. Fin del programa.")
+    print("Gracias por confiar en nosotros, vuelva pronto.")
