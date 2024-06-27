@@ -1,7 +1,6 @@
 def lista_del_personal1():
     listpersonal=[]
-    opc=2
-    while opc==2:
+    while (True):
         print("Ingrese si quiere ver o agregar los datos del personal")
         print("1) Ver datos del personal")
         print("2) Agregar datos")
