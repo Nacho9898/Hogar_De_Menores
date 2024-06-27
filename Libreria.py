@@ -55,7 +55,7 @@ def ingresar_datos():
     
     while True:
         rut = input("Ingrese el RUT (sin puntos, con guion verificador): ")
-        if '-' in rut and len(rut.split('-')[0]) > 0 and len(rut.split('-')[1]) == 1:
+        if '-' & "." in rut and len(rut.split('-')[0]) > 0 and len(rut.split('-')[1]) == 1:
             menor['RUT'] = rut
             break
         else:
