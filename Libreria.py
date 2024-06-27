@@ -54,8 +54,8 @@ def ingresar_datos():
             print("Formato de sala no válido. Inténtelo de nuevo.")
     
     while True:
-        rut = input("Ingrese el RUT (sin puntos, con guion verificador): ")
-        if '-' & "." in rut and len(rut.split('-')[0]) > 0 and len(rut.split('-')[1]) == 1:
+        rut = input("Ingrese el RUT (con puntos y con guion verificador): ")
+        if '-' in rut and len(rut.split('-')) == 2 and len(rut.split('-')[1]) == 1:
             menor['RUT'] = rut
             break
         else:
@@ -69,7 +69,7 @@ def ingresar_datos():
 
 def consultar_datos():
     if menores:
-        rut_consulta = input("Ingrese el RUT del menor que desea consultar (sin puntos, con guion verificador): ")
+        rut_consulta = input("Ingrese el RUT del menor que desea consultar (con puntos y con guion verificador): ")
         menor = next((m for m in menores if m['RUT'] == rut_consulta), None)
         if menor:
             print("\nDatos del menor:")
@@ -94,7 +94,9 @@ def lista_del_personal1():
             if not personal:
                 print("No hay datos del personal ingresados.")
             else:
-                print("Datos del personal:")
+                verificador = input("Ingrese rut a onsultar (Con punto y con guion verificador): ")
+                if verificador in personal:
+                    print(f"{key}: {value}")
                 for datos_persona in personal:
                     print("Datos de la persona:")
                     for key, value in datos_persona.items():
@@ -137,14 +139,13 @@ def lista_del_personal1():
                 else:
                     print("No se puede dejar en blanco")
             
-            def generar_rut_con_dv(rut_bas, dv):
-                return f"{rut_bas}-{dv.upper()}"
+            def generar_rut_con_dv(rut_bas):
+                return f"{rut_bas}"
             
             while True:
-                rut_bas = input("Por favor ingrese su rut sin dígito de verificación y sin puntos: ")
-                dv = input("Por favor ingrese el código de verificación: ")
-                if rut_bas and dv:
-                    rut_completo = generar_rut_con_dv(rut_bas, dv)
+                rut_bas = input("Por favor ingrese su rut sin puntos y con guion: ")
+                if rut_bas:
+                    rut_completo = generar_rut_con_dv(rut_bas)
                     datos_persona["RUT"] = rut_completo
                     break
                 else:
