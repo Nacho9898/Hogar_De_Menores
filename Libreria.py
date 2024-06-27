@@ -69,7 +69,7 @@ def ingresar_datos():
 
 def consultar_datos():
     if menores:
-        rut_consulta = input("Ingrese el RUT del menor que desea consultar (con puntos y con guion verificador): ")
+        rut_consulta = input("Ingrese el RUT del menor que desea consultar (con o sin puntos y con guion verificador): ")
         menor = next((m for m in menores if m['RUT'] == rut_consulta), None)
         if menor:
             print("\nDatos del menor:")
@@ -94,7 +94,7 @@ def lista_del_personal1():
             if not personal:
                 print("No hay datos del personal ingresados.")
             else:
-                verificador = input("Ingrese rut a onsultar (Con punto y con guion verificador): ")
+                verificador = input("Ingrese rut a onsultar (Con o sin punto y con guion verificador): ")
                 if verificador in personal:
                     print(f"{key}: {value}")
                 for datos_persona in personal:
@@ -143,7 +143,7 @@ def lista_del_personal1():
                 return f"{rut_bas}"
             
             while True:
-                rut_bas = input("Por favor ingrese su rut sin puntos y con guion: ")
+                rut_bas = input("Por favor ingrese su rut con o sin punto y con guion: ")
                 if rut_bas:
                     rut_completo = generar_rut_con_dv(rut_bas)
                     datos_persona["RUT"] = rut_completo
@@ -176,7 +176,7 @@ def lista_del_personal1():
 
 def ingresar_observaciones():
     if menores:
-        rut_consulta = input("Ingrese el RUT del menor para agregar una anotación (sin puntos, con guion verificador): ")
+        rut_consulta = input("Ingrese el RUT del menor para agregar una anotación (con o sin puntos, con guion verificador): ")
         menor = next((m for m in menores if m['RUT'] == rut_consulta), None)
         if menor:
             anotacion = input("Ingrese la anotación para el menor: ")
@@ -189,7 +189,7 @@ def ingresar_observaciones():
 
 def consultar_observaciones():
     if anotaciones_menores:
-        rut_consulta = input("Ingrese el RUT del menor para consultar anotaciones (sin puntos, con guion verificador): ")
+        rut_consulta = input("Ingrese el RUT del menor para consultar anotaciones (con o sin puntos, con guion verificador): ")
         menor = next((m for m in anotaciones_menores if m['menor']['RUT'] == rut_consulta), None)
         if menor:
             print("\nAnotaciones del menor:")
