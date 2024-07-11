@@ -52,8 +52,8 @@ git clone + url                                         || (Clona el repositorio
 =============================================================================
 
 Conflicto de merge
-git merge --abort || (cancela el merge)
-git merge --continue || (continua el merge)
+git merge --abort                                       || (cancela el merge)
+git merge --continue                                    || (continua el merge)
 
 =============================================================================
 
